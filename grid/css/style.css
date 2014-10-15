@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;   
+}
+
+/********************************************
+                CSS CLEARFIX
+********************************************/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+/***********END OF CSS CLEARFIX***********/
+
+body{
+    
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header, footer{
+    text-align: center;
+}
+
+/* -- Grid Styles -- */
+.col-container{
+    border: 3px solid darkcyan;
+    width: 100%;
+}
+
+/* -- Column 2 Styles -- */
+.col-2{
+    margin: 4rem 0;
+    padding: 1rem;
+    background: yellow;
+}   
+
+@media screen and (min-width: 600px){
+  /* -- 47 + 47 = 94% -- */  
+    .col-2{
+        float: left;
+        width: 47%;
+        padding: 2rem;
+        margin-left: 6%;
+    }    
+    .col-2:first-child{
+        margin-left: 0;   
+    }
+}
+
+/* -- Column 3 Styles -- */
+.col-3{
+    margin: 4rem 0;
+    padding: 1rem;
+    background: orange;   
+}
+
+@media screen and (min-width: 600px){
+  /* -- 29.33 + 29.33 + 29.33 = 87.99% -- */  
+  /* -- 6 + 6 = 12% -- */     
+    .col-3{
+        width: 29.33%;
+        float: left;
+        margin-left: 6%;
+    }
+    .col-3:first-child{
+        margin-left: 0;
+    }
+}
+
+/* -- Column 4 Styles -- */
+.col-4{
+    margin: 4rem 0;
+    padding: 1rem;
+    background: lightgreen;   
+}
+
+@media screen and (min-width: 600px){
+  /* -- margin: 6+6+6=18% -- */
+  /* -- remaining space = 82 -- */ 
+  /* -- 82/4 = 20.5% -- */
+    .col-4{
+        width: 20.5%;
+        float: left;
+        margin-left: 6%;
+    }
+    .col-4:first-child{
+        margin-left: 0;
+    }
+}
+
+
+
